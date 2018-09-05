@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="btn">
+
+    <ion-title><ion-icon name="cart"></ion-icon> Shopping Lists</ion-title>
+    <ion-buttons end *ngIf="lists != 0">
+    	<button ion-button icon-left (click)="newShoppingList()">
+    		<ion-icon name="add"></ion-icon>
+        List
+    	</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <ion-spinner name="bubbles" *ngIf="looding" class="looding"></ion-spinner>
+  
+  <div *ngIf="!looding">
+
+    <div class="no-items" *ngIf="lists == 0">
+      <ion-icon name="basket"></ion-icon>
+      <p>No shopping list</p>
+      <button color="btn" ion-button block (click)="newShoppingList()">
+        Make your first shopping list
+      </button>
+    </div>
+
+
+  	<ion-item *ngFor="let item of lists.reverse()" (press)="showConfirmation(item)" (click)="openShoppingList(item)">
+      <ion-avatar item-start>
+        <img src="./assets/imgs/icon1.png">
+      </ion-avatar>
+  		<h2 text-wrap>{{item.Name}}</h2>
+      <p>{{item.Date}}</p>
+  	</ion-item>
+
+  </div>
+
+
+
+</ion-content>

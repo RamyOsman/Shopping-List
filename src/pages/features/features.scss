@@ -1,0 +1,63 @@
+page-features {
+
+.scroll-content {
+    background: url('../assets/imgs/bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+ion-icon {
+    font-size: 5em;
+    color: #303F9F;
+}
+
+.swiper-slide img {
+    width: 280px;
+    height: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.skip-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    box-shadow: none;
+    color: #FFF;
+    border: 1px solid #FFF;
+}
+
+
+.button-md:hover:not(.disable-hover) {
+    background: none !important;
+}
+
+
+
+.swiper-pagination-bullet-active {
+    background: #FFF;
+}
+
+
+
+.start-btn:hover:not(.disable-hover) {
+    background-color: #303F9F !important;
+}
+
+h2 {
+    margin: 0;
+    color: #303F9F;
+    margin-left: 20px;
+    font-family: Lobster-Regular;
+    margin-right: 20px;
+    letter-spacing: 3px;
+}
+
+
+
+}

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="btn">
+    <ion-title>Add product</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+
+
+
+		
+
+		<ion-spinner name="bubbles" *ngIf="looding" class="looding"></ion-spinner>
+		
+		<div *ngIf="!looding">
+
+		    <div class="no-items" *ngIf="lists == 0">
+		      <ion-icon name="cart"></ion-icon>
+		      <p>No products</p>
+		    </div>
+
+			<ion-item *ngFor="let item of products" (click)="addItem(item)">
+				<button ion-button color="danger" item-start>
+					<ion-icon name="add"></ion-icon>
+				</button>
+				<h2 text-wrap>{{item.name}}</h2>
+			</ion-item>
+
+		</div>
+
+
+
+</ion-content>

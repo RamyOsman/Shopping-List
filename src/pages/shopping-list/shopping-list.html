@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="btn">
+    <ion-title>{{shoppingListName}}</ion-title>
+    <ion-buttons end *ngIf="products != 0">
+    	<button ion-button icon-left (click)="addItem()">
+    		<ion-icon name="add"></ion-icon>
+        Product
+    	</button>       	
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+
+  <div class="no-items" *ngIf="products == 0">
+    <ion-icon name="cart"></ion-icon>
+    <p>No Products</p>
+    <button color="btn" ion-button block (click)="addItem()">
+      Add Products to your shopping list
+    </button>    
+  </div>
+
+    <ion-item *ngFor="let item of products">
+        <h2 text-wrap>{{item.name}} ( <span>{{item.Number}}</span> )</h2>
+        <p>Price : {{item.totalPrice}} $</p>
+
+        <button ion-button item-right (click)="deleteProduct(item)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+
+
+        <button item-left ion-button (click)="decreament(item)">
+          <div>ـــ</div>
+        </button>
+
+        <button item-left ion-button (click)="increament(item)">
+          <ion-icon name="add"></ion-icon>
+        </button>
+
+
+    </ion-item>
+
+
+
+
+</ion-content>
+
+
+<ion-footer *ngIf="products != 0">
+  <button block color="btn" ion-button>
+    Total Price : {{TotalPrice}} $
+  </button>
+</ion-footer>

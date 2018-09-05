@@ -1,0 +1,146 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+  @font-face {
+    font-family: Lobster-Regular;
+    src: url("../assets/fonts/Lobster-Regular.ttf");
+  }
+  @font-face {
+    font-family: Kalam-Light;
+    src: url("../assets/fonts/Kalam-Light.ttf");
+  }
+
+
+
+    .scroll-content {
+        overflow-y: auto;
+    }
+
+
+    button.bar-button.bar-button-md.bar-button-default.bar-button-default-md {
+        color: #FFF !important;
+        text-transform: capitalize;
+    }
+
+    .item-md {
+        padding-left: 0;
+        background-color: transparent;
+    }
+
+
+    .item-md.item-block .item-inner {
+        padding: 0;
+    }
+
+        
+    .alert-head {
+        padding: 0 !important;
+        padding-bottom: 10px !important;
+        padding-top: 10px !important;
+        text-align: center !important;
+    }
+
+    .alert-title {
+        color: #303F9F !important;
+        font-size: 20px !important;
+        font-weight: 400 !important;
+        border-bottom: 2px solid;
+        padding-bottom: 5px;
+    }
+
+    .alert-message {
+        color: #000 !important;
+        display: none;
+        padding: 0 !important;
+        text-align: center;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        padding-left: 10px !important;
+        overflow-y: auto;
+        padding-right: 10px !important;
+    }
+
+    .alert-md .alert-message, .alert-md .alert-input-group {
+        padding: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .alert-md .alert-input {
+        border-bottom: 1px solid #303F9F;
+    }
+
+    .alert-button-group {
+        padding: 0px !important;
+        margin-top: 10px !important;
+        border-top: 2px solid;
+        color: #303F9F !important;
+        justify-content: left !important;
+    }
+
+    .alert-button {
+        padding: 0px !important;
+        margin: 0px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        text-transform: capitalize !important;
+        width: 100% !important;
+        border-bottom: 1px solid #e0e0e0 !important;
+        color: #303F9F !important;
+    }
+
+    .alert-half-btn {
+        width: 50% !important;
+    }
+
+
+    .alert-wrapper .button-inner {
+        justify-content: center !important;
+    }
+
+
+
+    .item .button-md {
+        background: transparent !important;
+        box-shadow: none !important;
+        color: #303F9F;
+        border: 1px solid;
+    }
+
+    .looding {
+        transform: translate(-50%, -50%);
+        left: 50%;
+        position: absolute;
+        top: 50%;
+    }
+
+    .no-items {
+        transform: translate(-50%, -50%);
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        color: #303F9F;
+        font-size: 18px;
+    }
+
+    .no-items ion-icon {
+        font-size: 3.5em;
+    }
+
+    ion-footer .button {
+        margin: 0;
+    }
